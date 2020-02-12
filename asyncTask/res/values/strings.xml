@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Conversor Moneda</string>
+    <string name="act_mostrar_tarifas_name">Tarifas Cambio</string>
+</resources>

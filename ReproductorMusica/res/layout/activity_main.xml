@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tv_titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:text="Canciones"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <Spinner
+    android:id="@+id/sp_canciones"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="15dp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/bt_play"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="5dp"
+            android:onClick="play"
+            android:src="@drawable/ic_play_24px" />
+
+        <ImageButton
+            android:id="@+id/bt_pause"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:onClick="pausar"
+            android:src="@drawable/ic_pause_24px" />
+
+        <ImageButton
+            android:id="@+id/bt_stop"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="50dp"
+            android:onClick="stop"
+            android:src="@drawable/ic_stop_24px" />
+
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/play_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="35dp"
+        android:scaleType="centerInside"
+        app:lottie_rawRes="@raw/lottie_sound"
+        app:lottie_loop="true" />
+
+
+    <TextView
+        android:id="@+id/tv_mensaje"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:padding="5dp"
+        android:text="Buscando canciones..."
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#882399"
+        android:textSize="16sp"
+        android:textStyle="bold|italic" />
+
+
+</LinearLayout>
